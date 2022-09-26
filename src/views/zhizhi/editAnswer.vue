@@ -180,7 +180,7 @@ const onSubmit = () => {
   tableData.value = arr
 }
 watch([() => selectData.value.title, () => selectData.value.desc], () => {
-  if (selectData.value.title == '' && selectData.value.desc == '') {
+  if ((selectData.value.title == '' || !selectData.value.title) && (selectData.value.desc == '' || !selectData.value.desc)) {
     getQuestionData()
   }
 })
