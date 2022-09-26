@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkzhizhi_cms"]=self["webpackChunkzhizhi_cms"]||[]).push([[980],{5980:function(e,n,i){i.r(n),i.d(n,{default:function(){return h}});var u=i(3396),s=i(7139),t=i(4870),c=i(6554),a=(0,u.aZ)({__name:"HomeView",setup(e){const n=(0,c.L)();return(e,i)=>((0,u.wg)(),(0,u.iD)("div",null," Hi, "+(0,s.zw)((0,t.SU)(n).name),1))}});const r=a;var h=r}}]);
+//# sourceMappingURL=980.5e2f4dd6.js.map
