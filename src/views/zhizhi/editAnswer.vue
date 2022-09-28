@@ -169,7 +169,9 @@ onMounted(() => {
 // 根据问题和描述查询内容
 const onSubmit = () => {
   let arr = tableData.value
-  if (selectData.value.title || selectData.value.desc) {
+  if (!selectData.value.title && !selectData.value.desc) {
+    getQuestionData()
+  } else {
     if (selectData.value.title) {
       arr = arr.filter(data => (data.title as string).indexOf(selectData.value.title as string) !== -1)
     }
@@ -179,13 +181,9 @@ const onSubmit = () => {
   }
   tableData.value = arr
 }
-watch([() => selectData.value.title, () => selectData.value.desc], () => {
-  if ((selectData.value.title == '' || !selectData.value.title) && (selectData.value.desc == '' || !selectData.value.desc)) {
-    getQuestionData()
-  }
-})
 
 </script>
 
 <style scoped>
+
 </style>
