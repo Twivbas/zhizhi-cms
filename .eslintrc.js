@@ -17,5 +17,6 @@ module.exports = {
     // Unnecessary escape character: \. no-useless-escape
     'no-useless-escape': 0,
     quotes: ['error', 'single'],
+    semi: ['error', 'never']
   }
 }

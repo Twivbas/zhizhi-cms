@@ -118,6 +118,22 @@ export const routes: RouteRecordRaw[] = [
       }
     ]
   },
+  {
+    path: '/guide',
+    redirect: '/guide/index',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Guide',
+        meta: {
+          title: 'Guide',
+          hidden: false
+        },
+        component: () => import('../views/guide/guideView.vue'),
+      },
+    ]
+  },
   // test
   // {
   //   path: '/tab',
