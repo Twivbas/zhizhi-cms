@@ -3,7 +3,7 @@
     <div id="test" style="margin-bottom: 10px;">
       <p>Let user's focus on page by drivejs.</p>
     </div>
-    <el-button @click="handleClick">Start</el-button>
+    <el-button @click.prevent.stop="handleClick(driver)">Start</el-button>
   </div>
 </template>
 
@@ -11,8 +11,8 @@
 import Driver from 'driver.js'
 import 'driver.js/dist/driver.min.css'
 
+let driver = new Driver()
 
-const driver = new Driver()
 const steps = [
   {
     element: '.el-menu-item',
@@ -40,15 +40,9 @@ const steps = [
   }
 ]
 
-// onMounted(() => {
-//   driver.highlight('#test')
-// })
-
-const handleClick = () => {
-  setTimeout(() => {
-    driver.defineSteps(steps)
-    driver.start()
-  })
+const handleClick = (driver: Driver) => {
+  driver.defineSteps(steps)
+  driver.start()
 }
 
 </script>
