@@ -118,19 +118,97 @@ export const routes: RouteRecordRaw[] = [
       }
     ]
   },
-  // test
-  // {
-  //   path: '/tab',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/tab/indexView.vue'),
-  //       name: 'Tab',
-  //       meta: { title: 'Tab' }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/guide',
+    redirect: '/guide/index',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Guide',
+        meta: {
+          title: 'Guide',
+          hidden: false
+        },
+        component: () => import('../views/guide/guideView.vue'),
+      },
+    ]
+  },
+  {
+    path: '/icon',
+    redirect: '/icon/index',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Icons',
+        meta: {
+          title: 'Icons',
+          hidden: true
+        },
+        component: () => import('../views/icon/indexView.vue')
+      }
+    ]
+  },
+  {
+    path: '/components',
+    name: 'Components',
+    redirect: '/components/index',
+    component: Layout,
+    meta: {
+      title: 'Components'
+    },
+    children: [
+      {
+        path: 'index',
+        name: 'Index',
+        meta: {
+          title: 'Index',
+          hidden: false
+        },
+        component: () => import('../views/components/indexView.vue')
+      }
+    ]
+  },
+  {
+    path: '/charts',
+    name: 'Charts',
+    redirect: '/charts/keyboard',
+    component: Layout,
+    meta: {
+      title: 'Charts'
+    },
+    children: [
+      {
+        path: 'keyboard',
+        name: 'Keyboard Chart',
+        meta: {
+          title: 'Keyboard Chart',
+          hidden: false
+        },
+        component: () => import('../views/charts/keyboardView.vue')
+      },
+      {
+        path: 'line',
+        name: 'Line Chart',
+        meta: {
+          title: 'Line Chart',
+          hidden: false
+        },
+        component: () => import('../views/charts/lineMarker.vue')
+      },
+      {
+        path: 'mix-chart',
+        name: 'Mix Chart',
+        meta: {
+          title: 'Mix Chart',
+          hidden: false
+        },
+        component: () => import('../views/charts/mixChart.vue')
+      }
+    ]
+  },
+
   // 404 page must be placed at the end !!!
   // Uncaught Error: Catch all routes ("*") must now be defined using a param with a custom regexp.
   { 
