@@ -208,6 +208,25 @@ export const routes: RouteRecordRaw[] = [
       }
     ]
   },
+  {
+    path: '/table',
+    name: 'Table',
+    component: Layout,
+    redirect: '/table/dynamic-table',
+    meta: {
+      title: 'Table'
+    },
+    children: [
+      {
+        path: 'dynamic-table',
+        name: 'DynamicTable',
+        meta: {
+          title: 'Dynamic Talbe'
+        },
+        component: () => import('../views/table/dynamicTable.vue')
+      }
+    ]
+  },
 
   // 404 page must be placed at the end !!!
   // Uncaught Error: Catch all routes ("*") must now be defined using a param with a custom regexp.
