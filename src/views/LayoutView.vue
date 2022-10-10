@@ -113,7 +113,7 @@ const delToken =  () => {
     top: 70px;
     left: 0;
     bottom: 0;
-    width: 200px;
+    width: 201px;
     background-color: #5f6770;
     // :deep .el-menu-vertical-demo :hover {
     //   background-color: #071f3d;
