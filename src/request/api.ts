@@ -1,5 +1,5 @@
 import request from './index'
-import { ILoginForm, IEditHotList, IbanUser, IAnswerInt, IRole} from '@/type/type'
+import { ILoginForm, IEditHotList, IbanUser, IAnswerInt, IRole, IListQuery} from '@/type/type'
 
 
 // 本地网址
@@ -120,5 +120,13 @@ export const deleteRoleApi = (id: string) => {
   return request({
     url: `/role/${id}`,
     method: 'delete'
+  })
+}
+
+export const fetchList = (query: IListQuery) => {
+  return request({
+    url: '/article/list',
+    method: 'get',
+    params: query
   })
 }
