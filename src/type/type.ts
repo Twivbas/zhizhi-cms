@@ -41,3 +41,7 @@ export interface ITreeData {
   }
 }
 
+export interface IListQuery {
+  page: number
+  limit: number
+}

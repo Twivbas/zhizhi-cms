@@ -155,16 +155,16 @@ export const routes: RouteRecordRaw[] = [
     name: 'Components',
     redirect: '/components/index',
     component: Layout,
-    meta: {
-      title: 'Components'
-    },
+    // meta: {
+    //   title: 'Components'
+    // },
     children: [
       {
         path: 'index',
         name: 'Index',
         meta: {
           title: 'Index',
-          hidden: false
+          hidden: true
         },
         component: () => import('../views/components/indexView.vue')
       }
@@ -205,6 +205,33 @@ export const routes: RouteRecordRaw[] = [
           hidden: false
         },
         component: () => import('../views/charts/mixChart.vue')
+      }
+    ]
+  },
+  {
+    path: '/table',
+    name: 'Table',
+    component: Layout,
+    redirect: '/table/dynamic-table',
+    meta: {
+      title: 'Table'
+    },
+    children: [
+      {
+        path: 'dynamic-table',
+        name: 'DynamicTable',
+        meta: {
+          title: 'Dynamic Table'
+        },
+        component: () => import('../views/table/dynamicTable/indexView.vue')
+      },
+      {
+        path: 'inline-edit-table',
+        name: 'Inline Edit',
+        meta: {
+          title: 'Inline Edit'
+        },
+        component: () => import('../views/table/inlineEdit.vue')
       }
     ]
   },

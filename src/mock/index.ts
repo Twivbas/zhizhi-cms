@@ -1,6 +1,7 @@
 import Mock from 'mockjs'
 import user from './user'
 import role from './role'
+import article from './article'
 
 /* function param2Obj(url: string) {
   const search = decodeURIComponent(url.split('?')[1]).replace(/\+/g, ' ')
@@ -20,7 +21,7 @@ import role from './role'
   return obj
 } */
 
-export const mocks = [...user, ...role]
+export const mocks = [...user, ...role, ...article]
 
 export function mockXHR() {
   // Mock.XHR.prototype.proxy_send = Mock.XHR.prototype.send
